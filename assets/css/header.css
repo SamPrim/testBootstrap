@@ -1,0 +1,77 @@
+body{
+    font-family: "Roboto", "Arial","sans-serif";
+    color: #333 ;
+    font-size: 0.9rem;
+}
+#main, #mask {
+    padding: 15px;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+}
+#main .menu{
+    display: inline-block;
+}
+#main ul.inline-links, #mask ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    line-height: 1;
+}
+#main ul.inline-links li, #mask  ul li{
+    display: inline-block;
+    cursor: pointer;
+}
+#main .menu:last-child ul {
+    float: right;
+}
+#main ul.inline-links li a, #mask  ul li a{
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+}
+#main ul.inline-links li:hover .list{
+    color: #000;
+    background-color: #ddd;
+    border-radius: 4px;
+}
+#main div.menu img{
+    cursor: pointer;
+}
+#main  ul.inline-links li .submenu ul{
+    position: absolute;
+    z-index: 1000;
+    margin: 10px;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+    display: none;
+}
+#main  ul.inline-links li:hover .submenu ul{
+    display: block;
+}
+#main  ul.inline-links li .submenu ul li{
+    display: block;
+    padding: 5px 0;
+}
+#mask{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    border: 1px solid transparent;
+    background-color: #f2f2f2;
+    transition: 3s ease-in-out;
+}
+#mask.active{
+    display: none !important;
+}
